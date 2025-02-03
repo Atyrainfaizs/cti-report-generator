@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Threat Actor Profile</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+        <div class="logo">Cyber Threat Intelligence</div>
+        <ul class="nav-links">
+            <li><a href="threatActorProfile.html">Threat Actor Profile</a></li>
+            <li><a href="campaignReport.html">Campaign Report</a></li>
+            <li><a href="intrusionAnalysisReport.html">Intrusion Analysis Report</a></li>
+            <li><a href="executiveReport.html">Executive Report</a></li>
+            <li><a href="searchReport.html">Existing Report</a></li>
+        </ul>
+    </nav>
+</header>
+  <main>
+    <h1 style="text-align: center;">Intrusion Analysis Report</h1>
+    <form id="intrusionForm">
+      <!-- Row for Title and Report Number -->
+      <div class="report-row">
+        <div class="first-column">
+          <label for="name">Report Title</label>
+          <input type="text" id="name" name="name" placeholder="Enter the report title" required>
+        </div>
+        <div class="second-column">
+          <label for="reportID">Report Number</label>
+          <input type="text" id="reportID" name="reportID" placeholder="Enter the report number" required>
+        </div>
+      </div>
+
+      <!-- Row for Criticality, Sensitivity, and TLP -->
+      <div class="report-row">
+        <div class="third-column">
+          <label for="criticality">Criticality</label>
+          <select id="criticality" name="criticality" required>
+            <option value="">Select Level</option>
+            <option value="FYSA">FYSA</option>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+            <option value="Critical">Critical</option>
+          </select>
+        </div>
+        <div class="third-column">
+          <label for="sensitivity">Sensitivity</label>
+          <input type="text" id="sensitivity" name="sensitivity" placeholder="Enter sensitivity" required>
+        </div>
+        <div class="third-column">
+          <label for="tlp">TLP</label>
+          <select name="tlp" id="tlp" required>
+            <option value="">None</option>
+            <option value="RED">RED</option>
+            <option value="AMBER">AMBER</option>
+            <option value="GREEN">GREEN</option>
+            <option value="WHITE">WHITE</option>
+            <option value="CLEAR">CLEAR</option>
+          </select>
+        </div>
+    </div>
+
+    <br>
+
+    <!-- Executive Summary -->
+    <label for="executiveSummary">Executive Summary</label>
+    <textarea name="executiveSummary" id="executiveSummary" rows="5" placeholder="Write the executive summary here..."></textarea>
+
+    <label for="keyPoints">Key Points</label>
+    <textarea id="keyPoints" name="keyPoints" rows="5" placeholder="Write the key points here..."></textarea><br>
+
+    <label for="indicatorAnalysis">Indicator Analysis</label>
+    <textarea id="indicatorAnalysis" name="indicatorAnalysis" rows="5" placeholder="Write the indicator analysis here..."></textarea><br>
+
+    <div class="section-form">
+    <!-- Att&ck Mitre -->
+    <div class="report-row">
+        <div class="item-1"><h2>MITRE ATT&CK</h2></div>
+        <div class="item-2">
+          <button class="btn" id="addMitre">
+            <img src="add.png" alt="Add Timeline">
+          </button>
+        </div>
+    </div>
+    <div id="mitreContainer"></div>
+    </div>
+
+    <div class="section-form">
+    <!-- Metadata -->
+    <div class="report-row">
+      <div class="item-1"><h2>Threat Actor Details</h2></div>
+      <div class="item-2">
+        <button class="btn" id="addMetadata">
+          <img src="add.png" alt="Add Timeline">
+        </button>
+      </div>
+  </div>
+  <div id="metadataContainer"></div>
+  </div>
+
+    <div class="section-form">
+    <!-- Indicator -->
+    <h2>Indicator of Compromise</h2>
+    <div id="iocContainer"></div>
+    <button id="addIoc">Add IOC</button>
+    <br>
+    <!-- Dropdown to select IOC type -->
+    <select id="iocTypeSelector">
+        <option value="">Select IOC Type</option>
+        <option value="malware">Malware</option>
+        <option value="networkIndicator">Network Indicator</option>
+        <option value="systemArtifact">System Artifact</option>
+        <option value="cve">CVE</option>
+    </select>
+    </div>
+    
+    <div class="section-form">
+    <!-- Data Source Container -->
+    <h2>Data Source</h2>
+    <div id="dataSourceContainer">
+      <button id="addDataSource">Add Data Source</button>
+      <div id="dataSourceEntries"></div>
+    </div>
+    </div>
+
+
+    <div class="section-form">
+    <!-- Attach Photos Container -->
+    <h2>Attach Photos</h2>
+    <div id="photoContainer">
+      <button id="addPhotoButton" type="button">Add Photo</button>
+      <div id="photoFields"></div>
+      <div id="photoPreview"></div>
+    </div>
+    </div>
+    <br>
+    
+      <!-- Buttons -->
+      <div class="button-group">
+        <button type="submit">Save Report</button>
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 CTIReports. All Rights Reserved.</p>
+  </footer>
+  
+  <script src="intrusionAnalysis.js"></script>
+</body>
+</html>
+
+<style>
+
+/* Button Container */
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.button-container button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button-container button:hover {
+    background-color: #0056b3;
+    transform: scale(1.02);
+}
+
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 15px 10px;
+    font-size: 0.9rem;
+    border-top: 1px solid #444;
+}
+</style>
