@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Cyber Threat Intelligence</div>
+            <ul class="nav-links">
+                <li><a href="threatActorProfile.html">Threat Actor Profile</a></li>
+                <li><a href="campaignReport.html">Campaign Report</a></li>
+                <li><a href="intrusionAnalysisReport.html">Intrusion Analysis Report</a></li>
+                <li><a href="executiveReport.html">Executive Report</a></li>
+                <li><a href="searchReport.html">Existing Report</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="hero">
+            <h1>Create a Report</h1>
+        </section>
+        <section id="home">
+            <h2>Select a Report Type</h2>
+            <div class="button-container">
+                <button onclick="navigateTo('threatActorProfile.html')">Threat Actor Profile</button>
+                <button onclick="navigateTo('campaignReport.html')">Campaign Report</button>
+                <button onclick="navigateTo('intrusionAnalysisReport.html')">Intrusion Analysis Report</button>
+                <button onclick="navigateTo('executiveReport.html')">Executive Report</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 TechReports. All Rights Reserved.</p>
+    </footer>
+    <script>
+      function navigateTo(page) {
+      window.location.href = page;
+      }
+    </script>
+</body>
+</html>
+
+<style>
+/* General Reset */
+body, h1, h2, p, ul, li, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header Styling */
+header {
+    background: linear-gradient(90deg, #007BFF, #0056b3);
+    padding: 20px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Hero Section */
+#hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(180deg, #007BFF, #0056b3);
+    color: white;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    margin-bottom: 40px;
+}
+
+#hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+#hero button {
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #007BFF;
+    background-color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#hero button:hover {
+    background-color: #ffdd57;
+    transform: scale(1.05);
+}
+
+/* Home Section */
+#home {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: -50px auto 20px;
+}
+
+#home h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.button-container button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button-container button:hover {
+    background-color: #0056b3;
+    transform: scale(1.02);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 15px 10px;
+    font-size: 0.9rem;
+    border-top: 1px solid #444;
+}
+</style>
