@@ -1,0 +1,183 @@
+/* General Body Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+  
+  /* Header Styling */
+  header {
+    background-color: #1e1e2d;
+      color: #ffffff;
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  header h1 {
+    font-size: 28px;
+    margin: 0;
+    font-weight: 500;
+  }
+  
+  /* Form Styling */
+  form {
+    background-color: #ffffff;
+      padding: 40px;
+      margin: 40px auto;
+      border: 1px solid #e0e0e0;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      max-width: 900px;
+  }
+  
+  /* Form Labels */
+  label {
+    font-weight: 500;
+      margin-bottom: 8px;
+      display: block;
+      font-size: 14px;
+      color: #4a4a6a;
+  }
+  
+  /* Input and Textarea */
+  input, select, textarea {
+    width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #d1d1d6;
+      border-radius: 6px;
+      font-size: 16px;
+      background-color: #f9f9fb;
+      transition: all 0.3s ease;
+  }
+  
+  input:focus, select:focus, textarea:focus {
+    border-color: #4a90e2;
+      box-shadow: 0 0 8px rgba(74, 144, 226, 0.3);
+      outline: none;
+  }
+  
+  /* Button Styling */
+  button {
+    background-color: #4a90e2;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 500;
+      transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #357abd;
+  }
+  
+  /* Button Group */
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+  }
+  
+  /* Timeline Button */
+  .btn img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .btn:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 10%;
+  }
+  
+  /* Flex Layout for Rows */
+  .report-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  
+  .second-column{
+    flex: 1;
+  }
+  .third-column {
+    flex: 3;
+  }
+  .first-column{
+    flex: 2;
+  }
+  
+  .section-form {
+    background-color: #ffffff;
+      padding: 40px;
+      margin: 40px auto;
+      border: 1px solid #e0e0e0;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      max-width: 900px;
+  }
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .report-row {
+      flex-direction: column;
+    }
+  
+    .button-group {
+      flex-direction: column;
+    }
+}
+
+.ioc-item {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  position: relative;
+}
+.ioc-item label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.ioc-item input, .ioc-item select, .ioc-item textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.remove-ioc-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #dc3545;
+  padding: 5px 10px;
+  font-size: 12px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffdd57;
+}
